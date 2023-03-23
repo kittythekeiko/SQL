@@ -1,0 +1,32 @@
+--Create a grocery store database.
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, aisle INTEGER, quantity INTEGER, price INTEGER); 
+
+
+INSERT INTO clothing_store VALUES (1, "hoodies", "outerwear", 3, 50);
+INSERT INTO clothing_store VALUES (2, "long sleeve shirts", "tops", 5, 20);
+INSERT INTO clothing_store VALUES (3, "jeans", "bottoms", 2, 60);
+INSERT INTO clothing_store VALUES (4, "shorts", "bottoms", 1, 35);
+INSERT INTO clothing_store VALUES (5, "boots", "shoes", 3, 80);
+INSERT INTO clothing_store VALUES (6, "sandals", "shoes", 1, 15);
+INSERT INTO clothing_store VALUES (7, "short sleeve shirts", "tops", 5, 20);
+INSERT INTO clothing_store VALUES (8, "heels", "shoes", 10, 55);
+INSERT INTO clothing_store VALUES (9, "sneakers", "shoes", 15, 65);
+INSERT INTO clothing_store VALUES (10, "loafers",  "shoes", 12, 10);
+INSERT INTO clothing_store VALUES (11, "crop top shirt", "tops", 7, 20);
+INSERT INTO clothing_store VALUES (12, "cardigan", "outerwear", 17, 18);
+INSERT INTO clothing_store VALUES (13, "trench coats", "outerwear", 19, 40);
+INSERT INTO clothing_store VALUES (14, "sweaters", "tops", 23, 100);
+INSERT INTO clothing_store VALUES (15, "jackets", "outerwear", 4, 70);
+
+--Display the database ordered by price. 
+SELECT * FROM clothing_store 
+ORDER BY price desc;
+
+--What is the avg price of items in the bottoms section? 
+SELECT AVG(price) "avg bottoms item price"
+FROM clothing_store
+WHERE section='bottoms';
+
+
+
