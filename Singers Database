@@ -25,4 +25,4 @@ INSERT INTO songs (person_id, song_title) VALUES (10, "Dark horse");
 SELECT singers.name, singers.birth_location, songs.song_title 
 FROM singers
 LEFT OUTER JOIN songs
-ON singers.id = songs.person_id
+ON singers.id = songs.person_id;
