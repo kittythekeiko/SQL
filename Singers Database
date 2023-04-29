@@ -1,0 +1,27 @@
+CREATE table singers (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT,birth_location TEXT, age INTEGER); 
+
+INSERT INTO singers (name, birth_location, age) VALUES ("Chris Brown", "Virginia", 33);
+INSERT INTO singers (name, birth_location, age) VALUES ("Demi Lovato", "New Mexico", 30);
+INSERT INTO singers (name, birth_location, age) VALUES ("Lady Gaga", "New York", 37);
+INSERT INTO singers (name, birth_location, age) VALUES ("Taylor Swift", "Pennsylvania", 33);
+INSERT INTO singers (name, birth_location, age) VALUES ("Bruno Mars", "Hawaii", 37);
+INSERT INTO singers (name, birth_location, age) VALUES ("Rihanna", "Barbados", 35);
+INSERT INTO singers (name, birth_location, age) VALUES ("Adele", "London", 34);
+INSERT INTO singers (name, birth_location, age) VALUES ("Usher", "Texas", 44);
+INSERT INTO singers (name, birth_location, age) VALUES ("Madonna", "Michigan", 64);
+INSERT INTO singers (name, birth_location, age) VALUES ("Katy Perry", "California", 38);
+
+CREATE TABLE songs (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, song_title TEXT);
+INSERT INTO songs (person_id, song_title) VALUES (1, "With you");
+INSERT INTO songs (person_id, song_title) VALUES (2, "Cool for the summer");
+INSERT INTO songs (person_id, song_title) VALUES (3, "Applause");
+INSERT INTO songs (person_id, song_title) VALUES (4, "Wildest dreams");
+INSERT INTO songs (person_id, song_title) VALUES (5, "24k Magic");
+INSERT INTO songs (person_id, song_title) VALUES (6, "Diamonds");
+INSERT INTO songs (person_id, song_title) VALUES (7, "Hello");
+INSERT INTO songs (person_id, song_title) VALUES (10, "Dark horse");
+
+SELECT singers.name, singers.birth_location, songs.song_title 
+FROM singers
+LEFT OUTER JOIN songs
+ON singers.id = songs.person_id
