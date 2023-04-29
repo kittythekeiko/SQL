@@ -21,6 +21,7 @@ INSERT INTO songs (person_id, song_title) VALUES (6, "Diamonds");
 INSERT INTO songs (person_id, song_title) VALUES (7, "Hello");
 INSERT INTO songs (person_id, song_title) VALUES (10, "Dark horse");
 
+--Come up with a query that lists the singers, where they are from, and a name of their song with a left outer join.
 SELECT singers.name, singers.birth_location, songs.song_title 
 FROM singers
 LEFT OUTER JOIN songs
