@@ -1,3 +1,6 @@
+I am querying a database that has Netflix data to answer questions about the data.
+
+
 --How many movie titles are there in the database? (movies only, not tv shows)
 SELECT COUNT(*) 
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
